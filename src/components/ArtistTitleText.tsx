@@ -5,11 +5,13 @@ import { motion } from 'motion/react';
 interface ArtistTitleTextProps {
   artist: Artist;
   onHover: (name: string) => void;
+  onHoverEnd: () => void;
 }
 
 export default function ArtistTitleText({
   artist,
   onHover,
+  onHoverEnd,
 }: ArtistTitleTextProps) {
   return (
     <motion.div
@@ -24,6 +26,7 @@ export default function ArtistTitleText({
         mass: 0.8,
       }}
       onMouseEnter={(e) => onHover(e.currentTarget.dataset.text!)}
+      onMouseLeave={onHoverEnd}
     >
       {artist.displayName}
     </motion.div>

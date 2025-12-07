@@ -15,11 +15,14 @@ function App() {
           <ArtistTitleText
             artist={artist}
             onHover={(name) => setHoveredText(name)}
+            onHoverEnd={() => setHoveredText('')}
           />
         ))}
       </div>
-      {hoveredText && data[hoveredText]?.text}
-      <ArtistPreviewImg />
+      {hoveredText &&
+        data[hoveredText]?.map((value, index) => (
+          <ArtistPreviewImg key={index} item={value} />
+        ))}
     </div>
   );
 }
