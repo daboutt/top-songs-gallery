@@ -3,6 +3,7 @@ import './App.css';
 import ArtistPreviewImg from './components/ArtistPreviewImg';
 import ArtistTitleText from './components/ArtistTitleText';
 import { ARTIST_TITLES } from './lib/constant';
+import { data } from './lib/data';
 
 function App() {
   const [hoveredText, setHoveredText] = useState('');
@@ -12,12 +13,12 @@ function App() {
       <div className='artist-container'>
         {ARTIST_TITLES.map((artist) => (
           <ArtistTitleText
-            key={artist.id}
-            name={artist.name}
+            artist={artist}
             onHover={(name) => setHoveredText(name)}
           />
         ))}
       </div>
+      {hoveredText && data[hoveredText]?.text}
       <ArtistPreviewImg />
     </div>
   );
