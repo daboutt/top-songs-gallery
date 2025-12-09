@@ -1,8 +1,17 @@
-.preview-img {
+.preview-container {
   position: absolute;
-  object-fit: cover;
   display: flex;
-  justify-content: center;
+  aspect-ratio: 3 / 2;
+  width: 16rem; /* 64 * 0.25rem = 16rem */
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
