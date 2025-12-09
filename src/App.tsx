@@ -4,9 +4,11 @@ import ArtistPreviewImg from './components/ArtistPreviewImg';
 import ArtistTitleText from './components/ArtistTitleText';
 import { ARTIST_TITLES } from './lib/constant';
 import { data } from './lib/data';
+import { useMousePosition } from './hooks/useMousePosition';
 
 function App() {
   const [hoveredText, setHoveredText] = useState('');
+  const mousePosition = useMousePosition();
 
   return (
     <div className='app'>
@@ -21,7 +23,12 @@ function App() {
       </div>
       {hoveredText &&
         data[hoveredText]?.map((value, index) => (
-          <ArtistPreviewImg key={index} item={value} />
+          <ArtistPreviewImg
+            key={index}
+            index={index}
+            item={value}
+            mousePosition={mousePosition}
+          />
         ))}
     </div>
   );
