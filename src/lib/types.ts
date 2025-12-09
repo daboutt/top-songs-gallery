@@ -5,4 +5,7 @@ export type Artist = {
 
 export type ArtistPreview = {
   src: string;
+  offsetX: number;
+  offsetY: number;
+  rotate: number;
 };
