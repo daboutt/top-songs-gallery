@@ -7,12 +7,21 @@ export const data: Record<string, ArtistPreview[]> = {
   newJeans: [
     {
       src: newJeans1,
+      offsetX: -400,
+      offsetY: -190,
+      rotate: -8,
     },
     {
       src: newJeans2,
+      offsetX: 100,
+      offsetY: -280,
+      rotate: 3,
     },
     {
       src: newJeans3,
+      offsetX: 400,
+      offsetY: -100,
+      rotate: 6,
     },
   ],
 };
