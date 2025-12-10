@@ -17,8 +17,8 @@ export const ANIMATION_CONFIG = {
 } as const;
 
 export const ARTIST_TITLES: Artist[] = [
-  { id: 'newJeans', displayName: 'NewJeans' },
-  { id: 'lowG', displayName: 'LowG' },
-  { id: 'jennie', displayName: 'Jennie' },
-  { id: 'grande', displayName: 'Grande' },
+  { id: 'supernatural', displayName: 'Supernatural' },
+  { id: 'ditto', displayName: 'Ditto' },
+  { id: 'newjeans', displayName: 'NewJeans' },
+  { id: 'omg', displayName: 'Oh! My! Glory!' },
 ];
