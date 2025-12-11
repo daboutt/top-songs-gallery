@@ -19,7 +19,10 @@ export default function ArtistTitleText({
       data-text={artist.id}
       className='artist'
       animate={ANIMATION_CONFIG.initial}
-      whileHover={ANIMATION_CONFIG.hover}
+      whileHover={{
+        ...ANIMATION_CONFIG.hover,
+        textShadow: '0px 0px 8px rgba(255, 255, 255, 0.8)',
+      }}
       transition={ANIMATION_CONFIG.transition}
       onMouseEnter={(e) => onHover(e.currentTarget.dataset.text!)}
       onMouseLeave={onHoverEnd}
